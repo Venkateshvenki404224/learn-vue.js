@@ -2,7 +2,7 @@
   <div align="center" style="margin-top: 50px">
     <form @submit.prevent="createTodo">
       <label for="todo-description">Description</label>
-      <input v-model="data.todoDescription" type="text" id="todo-description" />
+      <input v-model="data.todoDescription" type="text" id="todo-description" @keyup.ctrl.enter="createTodo" />
 
       <input type="submit" value="Create" />
       <br /><br />
